@@ -1,0 +1,4 @@
+Framework,TrainAccuracy,TestAccuracy,DataLoadingTime(ms),PreprocessingTime(ms),TotalTrainingTime(s),TimePerEpoch(ms),InferenceTime(us),TrainingMemoryUsed(MB),InferenceMemory(MB)
+Rust,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+NumPy,-0.008299999999999974,0.0,3.2531,6.676,0.35900000000000004,0.35900000000000004,45.3,1.0823,38.0052
+scikit-learn,0.008299999999999974,0.033299999999999996,2.4806,3.139,0.41200000000000003,0.41200000000000003,108.5,1.012,92.2786

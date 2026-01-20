@@ -1,0 +1,21 @@
+[package]
+name = "iris_nn"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ndarray = "0.15"
+
+
+rayon = "1.10"
+sysinfo = "0.31"
+csv = "1.3"
+rand = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
