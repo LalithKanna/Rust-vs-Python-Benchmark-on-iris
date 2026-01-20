@@ -262,6 +262,7 @@ From this benchmark, it is clear that Rust provides:
 - Low latency with minimal runtime overhead
 
 Unlike Python-based ecosystems, where most numerical computation is delegated to predefined BLAS backends hidden behind high-level APIs, Rust allows the developer to decide how computation is performed at every level.
+
 ---
 
 This is particularly valuable when implementing:
@@ -275,6 +276,7 @@ This is particularly valuable when implementing:
 - Memory-constrained or latency-critical systems
 
 In Rust, the developer owns the full execution path from data loading to matrix operations. This makes it possible to optimize both time and memory intentionally, rather than relying on opaque framework behavior.
+
 --- 
 
 ### 6.2 Flexibility in Math Backends and Hardware Targeting
@@ -288,6 +290,7 @@ Rust does not enforce a single numerical backend. Depending on requirements, it 
 - Intel MKL for maximum performance on Intel CPUs
 
 This flexibility is important for production systems that must run across different CPUs, cloud environments, and edge devices. Python users typically inherit whatever BLAS backend the environment provides, with limited control.
+
 ---
 
 ### 6.3 Operation Fusion and Memory Efficiency
@@ -305,11 +308,13 @@ Rust enables optimizations that are difficult to express cleanly in Python:
 - Compiler-driven SIMD vectorization
 
 These reduce instruction count, memory traffic, and allocation overhead, which directly improves speed and memory usage.
+
 ---
 
 ### 6.4 Strong CPU Performance Without GPUs
 
 The experiment shows that carefully written Rust code can achieve excellent CPU performance without GPUs. By combining batching, vectorization, optional BLAS usage, and fused operations, Rust delivers high throughput and low latency on CPUs, making it suitable for cost-sensitive and real-time systems. The same cpu logic can be applied to gpu also but with parellel processing capacity which can outperform python in all ways but this requires carefull planning and execution for larger systems.
+
 ---
 
 ### 6.5 Training vs Deployment
