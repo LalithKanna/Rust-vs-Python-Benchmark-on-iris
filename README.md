@@ -260,6 +260,7 @@ From this benchmark, it is clear that Rust provides:
 - Predictable latency with low runtime overhead
 
 - Unlike Python-based ecosystems, where most numerical computation is delegated to predefined BLAS backends hidden behind high-level APIs, Rust allows the developer to decide how computation is performed at every level.
+---
 
 This is particularly valuable when implementing:
 
@@ -272,6 +273,7 @@ This is particularly valuable when implementing:
 - Memory-constrained or latency-critical systems
 
 In Rust, the developer owns the full execution path from data loading to matrix operations. This makes it possible to optimize both time and memory intentionally, rather than relying on opaque framework behavior.
+--- 
 
 ### 6.2 Flexibility in Math Backends and Hardware Targeting
 
@@ -290,6 +292,7 @@ Depending on project requirements, Rust allows:
 In contrast, Python users typically inherit whatever BLAS backend NumPy or the runtime environment provides, with limited visibility into how it is used internally.
 
 This flexibility is critical for production systems that must run across different CPU architectures, cloud environments, edge devices, and embedded systems.
+---
 
 ### 6.3 Operation Fusion, SIMD, and Memory Locality
 
@@ -310,6 +313,7 @@ In this experiment, several optimizations were applied that are difficult or imp
 These optimizations significantly reduce instruction count, cache misses, memory bandwidth usage, and allocation overhead.
 
 Python frameworks often execute these steps as separate kernels, materializing intermediate arrays and incurring additional overhead at each stage.
+---
 
 ### 6.4 CPU Performance Without GPUs
 
@@ -318,6 +322,7 @@ An important outcome of this experiment is that well-designed Rust implementatio
 By combining batching, vectorization, optional BLAS acceleration, loop fusion, and cache-friendly memory layouts, Rust can deliver high throughput and low latency on CPUs.
 
 This makes Rust suitable for CPU-only production environments, cost-sensitive deployments, and real-time inference services. This performance profile can later be extended to GPUs or other accelerators, but strong baseline CPU performance already exists.
+---
 
 ### 6.5 Training vs Deployment: Where Rust Fits Best
 
@@ -336,6 +341,7 @@ A practical and effective workflow is:
 - Deploy the model in Rust for inference
 
 This approach combines Python’s flexibility with Rust’s performance and reliability.
+---
 
 ### 6.6 Final Conclusion
 
@@ -348,6 +354,7 @@ What it clearly demonstrates is that:
 - Rust enables performance and memory optimizations beyond framework abstractions
 
 - Rust is an excellent choice for production machine learning systems, especially inference
+---
 
 ### In summary:
 
