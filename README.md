@@ -152,8 +152,8 @@ This result is not accidental. It follows directly from system-level properties.
 
 **In Rust:**
 - No Python interpreter
-- No dynamic dispatch
-- No object boxing
+- Dynamic dispatch is optional(Here I avoided)
+- Object boxing is also optional 
 - No reference counting
 - No runtime shape checks
 
